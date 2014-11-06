@@ -2,7 +2,7 @@ EQUIPO SIGMA
 ==========
 Repositorio del grupo SIGMA.
 
-![Grande siempre](http://i.imgur.com/NR833Cn.gifv)
+![Grande siempre](http://i.imgur.com/NR833Cn.gif)
 
 # Alumnos participantes
 
