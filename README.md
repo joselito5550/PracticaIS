@@ -2,7 +2,7 @@ EQUIPO SIGMA
 ==========
 Repositorio del grupo SIGMA.
 
-![Grande siempre](http://i.imgur.com/NR833Cn.gif)
+![Grande siempre](http://i.imgur.com/xByMlW9.gif)
 
 # Alumnos participantes
 
@@ -10,11 +10,11 @@ Repositorio del grupo SIGMA.
 
  Omar Sotillo "omarsotillo"@github
 
- Jose "joselito5550"
+ Jose Marquez "joselito5550"@github
 
- Antonio Jose Portillo "p02polea"
+ Antonio Jose Portillo "p02polea"@github
 
- Juan Carmona "i42catej"
+ Juan Carmona "i42catej"@github
 
 ```
 
@@ -22,9 +22,9 @@ Repositorio del grupo SIGMA.
 
 ## Partes interesadas:
 
-1.Dentista
-2.Pacientes
-3.Administrativo/a (será el actor principal)
+1. Dentista
+2. Pacientes
+3. Administrativo/a (será el actor principal)
 
 ## Requisitos funcionales:
 
