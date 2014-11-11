@@ -1,0 +1,36 @@
+1|Historia: Insertar
+Como: Administrativo
+Quiero: Poder insertar nuevos contactos a la agenda
+Para: Mantenerme en contacto con los clientes
+
+2|Historia: Ordenación
+Como:Administrativo
+Quiero: Que todos los contactos se almacenen de forma ordenada
+Para: Poder buscarlos por apellido
+
+3|Historia: Buscar
+Como: Administrativo
+Quiero: Poder buscar clientes por apellido
+Para: Poder encontrarlos mas facilmente
+
+4|Historia: Modificar
+Como: Administrativo
+Quiero: Poder modificar los datos de los contactos
+Para: tener actualizada la agenda
+
+5|Historia: Borrar
+Como: Administrativo
+Quiero: Poder borrar contactos
+Para: Eliminar contactos innecesarios de la agenda
+
+6|Historia: Copias de seguridad
+Como:Administrativo
+Quiero: Poder realizar copias de seguridad
+Para: No perder informacion 
+
+//depende de "Copias de seguridad"
+7|Historia: Restaurar copias de seguridad
+Como:Administrativo
+Quiero: Poder restaurar copias realizadas
+Para: No perder nunca la agenda
+
