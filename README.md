@@ -14,7 +14,7 @@ Repositorio del grupo SIGMA.
 
  Antonio Jose Portillo "p02polea"@github
 
- Juan Carmona "i42catej"@github
+ Juan Jesús Carmona "i42catej"@github
 
 ```
 
