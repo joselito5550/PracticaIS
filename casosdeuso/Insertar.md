@@ -1,9 +1,9 @@
 CASO DE USO: Insertar
 =====================
 
-#ID: 1
+###ID: 1
 
-##Breve Descripción:
+###Breve Descripción:
 
 ```bash
 Con está función añadiremos clientes a nuestra agenda, es decír insertaremos clientes a nuestro fichero de texto.
@@ -45,8 +45,10 @@ El formato para insertar usuário será:
 
 ```bash
 1.Se le pide al usuario que introduzca los datos del cliente
-2.El programa los introduce en el fichero que el programa le da de manera ya prefijada.
-3.Se le pide elegir una opción en el menú.
+2.El programa los introduce en el fichero de manera ya prefijada.
+3.Ordena el total de la lista del fichero de texto después de cada inserción de cliente.
+4.Se le pide elegir una opción en el menú
+
 
 ```
 
