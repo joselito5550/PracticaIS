@@ -5,8 +5,8 @@
 **Quiero**: Poder insertar nuevos contactos a la agenda.  
 **Para**: Mantenerme en contacto con los clientes.  
 **Dependencias:** Ordenar.  
-**Prioridad: **1.  
-**Criterios de aceptación:  **
+**Prioridad:**1.  
+**Criterios de aceptación:**
 - Tras cada insertado, se ordenadará el fichero.
 - Si buscamos el contacto insertado debemos encontrarlo.
 - Debe permitir insertar todos los datos que aparecen en la tabla X.
@@ -17,9 +17,9 @@
 **Historia:** Buscar.  
 **Como: **Administrativo.  
 **Quiero:** Poder buscar clientes por apellido.  
-**Para: **Poder encontrarlos mas facilmente.  
-**Dependencias: **Insertar y ordenar.  
-**Prioridad: **2.  
+**Para:**Poder encontrarlos mas facilmente.  
+**Dependencias:**Insertar y ordenar.  
+**Prioridad:**2.  
 **Criterios de aceptación:**  
 - Siempre se realizará la busqueda por apellido.  
 - Se mostrarán todos los campos por pantalla.  
@@ -46,7 +46,7 @@
 **Quiero: **Poder borrar contactos.  
 **Para: **Eliminar contactos innecesarios de la agenda.  
 **Dependencias:** Insertar y buscar.  
-**Prioridad: **6.  
+**Prioridad:**6.  
 **Criterios de aceptación:**  
 - El contacto borrado no aparecerá en el fichero.  
 - Al mostrar por pantalla los contactos, este no deberá de aparecer.
@@ -57,7 +57,7 @@
 **Como:**Administrativo.  
 **Quiero:** Poder realizar copias de seguridad.  
 **Para:** No perder informacion.  
-**Dependencias: **Insertar.  
+**Dependencias:**Insertar.  
 **Prioridad:**3.  
 **Criterios de aceptación:**  
 - Se hará una copia de todo el fichero en “.txt”.  
@@ -84,7 +84,7 @@
 **Para: **Poder buscarlo más facilmente y distingir el contacto del resto.  
 **Dependencias:** Insertar y buscar.  
 **Prioridad:** 9.  
-**Criterios de aceptación:  **
+**Criterios de aceptación:**
 - Debera de aparecer un 1 si el contacto esta asignado como favorito y 0 si no.
 - Al insertar un nuevo contacto podré marcarlo como favorito o no.(Es decir será un dato más.)
 
@@ -97,7 +97,7 @@
 **Quiero:** Imprimir solamente los usuarios que sean favoritos.  
 **Para:** Poder tener un acceso más rápido a ciertos contactos.  
 **Dependencias:** Insertar y buscar.  
-**Prioridad: **10.  
-**Criterios de aceptación: **
+**Prioridad:**10.  
+**Criterios de aceptación:**
 - Solo apareceran los contactos que son favoritos .
 - Si tenemos varios contactos favoritos los imprimimos todos.
