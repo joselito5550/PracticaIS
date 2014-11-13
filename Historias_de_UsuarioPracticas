@@ -70,3 +70,13 @@ Para: No perder nunca la agenda
 Dependencias: 6
 Criterios de aceptación:
 -Deberán de aparecer solamente los contactos que esten en la copia de seguridad
+
+8|Historia: Favorito
+Como: Administrativo
+Quiero: Marcar cualquier contacto como favorito
+Para: Poder buscarlo más facilmente y distingir el contacto del resto
+Dependencias: 1-3
+Criterios de aceptación:
+-Debera de aparecer un 1 si el contacto esta asignado como favorito y 0 si no
+-Al insertar un nuevo contacto podré marcarlo como favorito o no
+-Tras marcar un contacto como favorito debera actualizarse el fichero
