@@ -10,6 +10,7 @@ Criterios de aceptación:
 -Tras cada insertado, se ordenadará el fichero
 - Si buscamos el contacto insertado debemos encontrarlo
 - Debe permitir insertar todos los datos que aparecen en la tabla X
+- No se podrá dar de alta a dos usuarios con los mismos campos
 
 2|Historia: Ordenar
 Como:Administrativo
@@ -28,7 +29,7 @@ Dependencias: 1-2
 Prioridad: 1
 Criterios de aceptación:
 - Siempre se realizará la busqueda por apellido
-- Se mostrarán todos los campos
+- Se mostrarán todos los campos por pantalla
 - Si hay dos personas con el mismo apellido se muestran los dos
 
 4|Historia: Modificar
@@ -39,7 +40,8 @@ Dependencias: 1-2-3
 Criterios de aceptación: 
 - Ningún campo obligatorio podrá estar vacío
 - Al modificar un contacto, este aparecerá con la nueva informacion al instante
-- Tras la modificacion, el fichero seguira ordenado 
+- Tras la modificacion, el fichero seguira ordenado
+- Se podrá modificar cualquier campo del contacto
 
 
 5|Historia: Borrar
