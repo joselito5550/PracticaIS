@@ -6,14 +6,14 @@ CASO DE USO:  Restaurar copia de seguridad.
 ###Breve Descripción:
 
 ```bash
-Con esta función restauraremos una copia de seguridad, es decir con un fichero auxiliar cambiaremos el fichero agenda tras realizar los cambios.
+Con esta función restauraremos una copia de seguridad.
 
 ```
 
 ###Actores Principales:
 
 ```bash
-Administrativo
+Administrativo.
 
 ```
 
@@ -33,8 +33,8 @@ Ninguna.
 ###Flujo de cada uso:
 
 ```bash
-1. Se le pide al usuario si quiere restaurar el fichero justo a la version anterior.
-2. A nivel de programa se borra el actual y se pone como agenda el fichero copia de seguridad.
+1. Se selecciona la opcion restaurar copia de seguridad.
+2. Se le pide al usuario si quiere restaurar el fichero justo a la version anterior como forma de confirmación.
 3. Se le pide al usuario que seleccione otra acción.
 
 
@@ -48,6 +48,7 @@ Se ha realizado una restauración del fichero de texto, y se le ha pedido al usu
 ```
 ###Flujos alternativos
 ```bash
-Ninguno.
+2.1 Si si se borra actual y se renombra el anterior.
+2.2 Si no se vuelve a menú.
 
 ```

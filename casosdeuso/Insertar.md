@@ -6,46 +6,36 @@ CASO DE USO: Insertar
 ###Breve Descripción:
 
 ```bash
-Con está función añadiremos clientes a nuestra agenda, es decír insertaremos clientes a nuestro fichero de texto.
+Con está función añadiremos clientes a nuestra agenda.
 
 ```
 
 ###Actores Principales:
 
 ```bash
-Administrativo
+Administrativo.
 
 ```
 
 ###Actores Secundarios:
 
 ```bash
-Clientes
+Clientes.
 
 ```
 
 ###Precondiciones:
 
 ```bash
-El formato para insertar usuário será:
-
-- DNI.
-- Nombre y apellidos.
-- Teléfonos.
-- Correos electrónicos.
-- Dirección(nes) postales.
-- Anotaciones.
-- Favorito.
-- Más usados.
-- Redes sociales (nombre + URL ó usuario).
+Ninguna.
 
 ```
 
 ###Flujo de cada uso:
 
 ```bash
-1.Se le pide al usuario que introduzca los datos del cliente
-2.El programa los introduce en el fichero de manera ya prefijada.
+1.Seleccionar la opción del menú.
+2.Se le pide al usuario que introduzca los datos del cliente.
 3.Ordena el total de la lista del fichero de texto después de cada inserción de cliente.
 4.Se le pide elegir una opción en el menú
 
@@ -55,7 +45,7 @@ El formato para insertar usuário será:
 ###Postcondiciones:
 
 ```bash
-Se ha añadido un nuevo usuario y se le ha pedido elegir otra opción.
+Se ha añadido un nuevo usuario.
 
 ```
 ###Flujos alternativos

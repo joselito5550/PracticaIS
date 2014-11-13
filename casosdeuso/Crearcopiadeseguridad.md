@@ -6,14 +6,14 @@ CASO DE USO: Crear copia de seguridad
 ###Breve Descripción:
 
 ```bash
-Con esta función haremos una copia de seguridad de nuestra agenda, es decir se hace una copia del fichero de texto.
+Con esta función haremos una copia de seguridad de nuestra agenda.
 
 ```
 
 ###Actores Principales:
 
 ```bash
-Administrativo
+Administrativo.
 
 ```
 
@@ -33,10 +33,10 @@ Ninguna.
 ###Flujo de cada uso:
 
 ```bash
-1. Se le pide al usuario si quiere hacer una copia de seguridad.
+1. Selecciona la opcion de copia de seguridad
 2. EL programa realiza una copia del fichero de texto.
-3. Se le pide al usuario que introduzca otra opción.
-(preguntar detalles al profesor).
+3. Se vuelve al menú.
+
 
 
 ```
@@ -44,7 +44,7 @@ Ninguna.
 ###Postcondiciones:
 
 ```bash
-Se ha realizado una copia del fichero de texto, y se le ha pedio al usuario que seleccione otra opcion.
+Se ha realizado una copia del fichero de texto.
 
 ```
 ###Flujos alternativos
