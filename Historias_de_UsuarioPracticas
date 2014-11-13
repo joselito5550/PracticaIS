@@ -2,29 +2,63 @@
 Como: Administrativo
 Quiero: Poder insertar nuevos contactos a la agenda
 Para: Mantenerme en contacto con los clientes
+Criterios de aceptación:
+-Tras cada insertado, se ordenadará el fichero
+- Si buscamos el contacto insertado debemos encontrarlo
 
-2|Historia: Buscar
+2|Historia: Ordenar
+Como:Administrativo
+Quiero: Que todos los contactos se almacenen de forma ordenada
+Para: Poder buscarlos por apellido
+Dependencias: 1
+Criterios de aceptación:
+-Al mostrar todos los contactos por pantalla deberan de estar ordenados
+-El fichero siempre estará ordenado
+
+3|Historia: Buscar
 Como: Administrativo
 Quiero: Poder buscar clientes por apellido
 Para: Poder encontrarlos mas facilmente
+Dependencias: 1-2
+Criterios de aceptación:
+-Siempre se realizará la busqueda por apellido
+- Se mostrarán todos los campos
+- Si hay dos personas con el mismo apellido se muestran los dos
 
-3|Historia: Modificar
+4|Historia: Modificar
 Como: Administrativo
 Quiero: Poder modificar los datos de los contactos
 Para: tener actualizada la agenda
+Dependencias:1-2-3
+Criterios de aceptación: 
+- Ningun campo obligatorio podra estar vacío
+-Al modificar un contacto, este aparecerá con la nueva informacion al instante
+-Tras la modificacion, el fichero seguira ordenado 
 
-4|Historia: Borrar
+
+5|Historia: Borrar
 Como: Administrativo
 Quiero: Poder borrar contactos
 Para: Eliminar contactos innecesarios de la agenda
+Dependencias: 1-3
+Criterios de aceptación: 
+-El contacto borrado no aparecerá en el fichero
+-Al mostrar por pantalla los contactos, este no deberá de aparecer
 
-5|Historia: Copias de seguridad
+6|Historia: Copias de seguridad
 Como:Administrativo
 Quiero: Poder realizar copias de seguridad
 Para: No perder informacion
+Dependencias: 1-3
+Criterios de aceptación:
+-Se hará una copia de todo el fichero en “.txt”
+-Al restaurarla deberán de estar exactamente los mismos contactos
 
 //depende de "Copias de seguridad"
-6|Historia: Restaurar copias de seguridad
+7|Historia: Restaurar copias de seguridad
 Como:Administrativo
 Quiero: Poder restaurar copias realizadas
 Para: No perder nunca la agenda
+Dependencias: 6
+Criterios de aceptación:
+-Deberán de aparecer solamente los contactos que esten en la copia de seguridad
