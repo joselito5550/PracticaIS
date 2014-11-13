@@ -1,10 +1,15 @@
+Niveles de prioridad menos a más: 1-10
+
 1|Historia: Insertar
 Como: Administrativo
 Quiero: Poder insertar nuevos contactos a la agenda
 Para: Mantenerme en contacto con los clientes
+Dependencias: 2
+Prioridad: 1
 Criterios de aceptación:
 -Tras cada insertado, se ordenadará el fichero
 - Si buscamos el contacto insertado debemos encontrarlo
+- Debe permitir insertar todos los datos que aparecen en la tabla X
 
 2|Historia: Ordenar
 Como:Administrativo
@@ -20,8 +25,9 @@ Como: Administrativo
 Quiero: Poder buscar clientes por apellido
 Para: Poder encontrarlos mas facilmente
 Dependencias: 1-2
+Prioridad: 1
 Criterios de aceptación:
--Siempre se realizará la busqueda por apellido
+- Siempre se realizará la busqueda por apellido
 - Se mostrarán todos los campos
 - Si hay dos personas con el mismo apellido se muestran los dos
 
@@ -29,11 +35,11 @@ Criterios de aceptación:
 Como: Administrativo
 Quiero: Poder modificar los datos de los contactos
 Para: tener actualizada la agenda
-Dependencias:1-2-3
+Dependencias: 1-2-3
 Criterios de aceptación: 
-- Ningun campo obligatorio podra estar vacío
--Al modificar un contacto, este aparecerá con la nueva informacion al instante
--Tras la modificacion, el fichero seguira ordenado 
+- Ningún campo obligatorio podrá estar vacío
+- Al modificar un contacto, este aparecerá con la nueva informacion al instante
+- Tras la modificacion, el fichero seguira ordenado 
 
 
 5|Historia: Borrar
