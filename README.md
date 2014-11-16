@@ -30,14 +30,16 @@ Repositorio del grupo SIGMA.
 
 ```bash
 
-- Una agenda como la del teléfono inteligente.
-- Buscar.
-- Ordenación.
-- Insertar-Modificar-Borrar.
-- Sin login para acceder (no es un requisito).
-- Copias de seguridad manuales a un fichero local.
-- Interfaz de texto por consola.
-- Imprimir la agenda de forma bonita en texto plano o HTML opcionalmente.
+
+1. Insertar
+2. Buscar.
+3. Modificar-
+4. Borrar.
+5. Copias de seguridad manuales a un fichero local.
+6. Restauracion copias de seguridad.
+7. Poder seleccionar favoritos.
+8. Interfaz de texto por consola.
+9. Imprimir la agenda de forma bonita en texto plano o HTML opcionalmente.
 
 ```
 
@@ -47,16 +49,15 @@ Almacenar información del paciente:
 
 
 ```bash
-
-- DNI.
-- Nombre y apellidos.
-- Teléfonos.
-- Correos electrónicos.
-- Dirección(nes) postales.
-- Anotaciones.
-- Favorito.
-- Más usados.
-- Redes sociales (nombre + URL ó usuario).
+1. Apellidos.
+2. DNI.
+3. Nombre 
+4. Teléfonos.
+5. Correos electrónicos.
+6. Dirección(nes) postales.
+7. Anotaciones.
+8. Favorito.
+9. Redes sociales (nombre + URL ó usuario).
 
 ```
 
@@ -64,12 +65,12 @@ Almacenar información del paciente:
 
 ```bash
 
-- Escrito en C++
-- Se ejecuta en un ordenador con Linux
-- Nivel de seguridad cero
-- Integridad de datos: copias de seguridad manuales
-- Volumen de datos 200 entradas
-- El almacenamiento es texto plano/binario
+1. Escrito en C++.
+2. Se ejecuta en un ordenador con Linux.
+3. Nivel de seguridad cero.
+4. Integridad de datos: copias de seguridad manuales.
+5. Volumen de datos 200 entradas.
+6.  El almacenamiento es texto plano/binario.
 
 ```
 
