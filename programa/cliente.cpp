@@ -7,7 +7,7 @@
 //Detalles: Clase cliente y parte pública y privada con modificadores y observadores.
 
 
-class Cliente{
+class Clientes{
 
   //parte privada: donde iran todos los datos de la clase.
 
@@ -22,7 +22,7 @@ class Cliente{
 
     //contructor
 
-    Cliente(string DNI, string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="", int favorito=0);
+    Clientes(string DNI, string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="", int favorito=0);
 
 
     //observadores
