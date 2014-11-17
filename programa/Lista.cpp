@@ -19,9 +19,6 @@ lista::~lista()
  elementos=NULL; 
  Tama=n=0; 
 } 
-/*void lista::insertarCliente(cadenasig signi,int i){
-	elementos[i].setSignificado(signi);
-}*/
  
 void lista::insertarCliente(int i, Clientes& e) 
 {
