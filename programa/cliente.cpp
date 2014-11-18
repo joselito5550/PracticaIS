@@ -61,32 +61,72 @@ class Clientes{
 
     //modificadores
 
-    void setDNI(string num){
-      DNI=num;
+      void setDNI(string num){
+      if(num.length()==9){
+        DNI=num;
+      } else {
+        cout<<"Error, longitud del DNI no valida"<<endl;
+      }
     };
+    
     void setNombre(string name){
-      nombre=name;
+      if(name.length()>0 && name.length()<=40){
+        nombre=name;
+      } else {
+        cout<<"Error"<<endl;
+      }
     };
+    
     void setApellido1(string surname1){
-      apellido1=surname1;
+      if(surname1.length()>0 && surname1.length()<=40){
+        apellido1=surname1;
+      } else {
+        cout<<"Error"<<endl;
+      }
     };
+    
     void setApellido2(string surname2){
-      apellido2=surname2;
+      if(surname2.length()>0 && surname2.length()<=40){
+        apellido2=surname2;
+      } else {
+        cout<<"Error"<<endl;
+      }
     };
+    
     void setDireccion(string direction){
-      direccion=direction;
+     if(direction.length()>0 && direction.length()<=40){
+        direccion=direction;
+      } else {
+        cout<<"Error"<<endl;
+      } 
     };
+    
     void setAnotaciones(string anotation){
       anotaciones=anotation;
     };
+    
     void setTwitter(string tuita){
-      twitter=tuita;
+      if(tuita.length()>=2 && tuita.length<=30) {
+        twitter=tuita;
+      } else {
+        cout<<"Error"<<endl;
+      }
     };
+    
     void setFacebook(string feibu){
-      facebook=feibu;
+      if(feibu.length()>=3 && feibu.length<=40){
+        facebook=feibu;
+      } else {
+        cout<<"Error"<<endl;
+      }
     };
+    
     void setFavorito(int favorite){
-      favorito=favorite;
+      if(favorite==0 || favorite ==1) {
+        favorito=favorite;
+      } else {
+        cout<<"Error, favorite debe tomar valor 0 (no favorito) o valor 1 (favorito)"<<endl;
+      }
     };
 
 };
