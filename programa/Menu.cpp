@@ -9,9 +9,10 @@
  		cout<<"3.-Buscar\n";
  		cout<<"4.-Modificar\n";
  		cout<<"5.-Eliminar\n";
- 		cout<<"6.-Hacer copia de seguridad\n";
- 		cout<<"7.-Restaurar copia\n";
- 		cout<<"8.-Salir\n";
+ 		cout<<"6.-Añadir Favorito\n"
+ 		cout<<"7.-Hacer copia de seguridad\n";
+ 		cout<<"8.-Restaurar copia\n";
+ 		cout<<"9.-Salir\n";
  		cout<<"Introduce la opcion:";
  		cin>>opc;
  		switch(opc){
@@ -38,6 +39,10 @@
  			}
  			case 8:{
  			
+ 			}
+ 			case 9:{
+ 			 
+ 			}
  			}
  		}
  	}while(opc!=8);
