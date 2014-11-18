@@ -13,7 +13,7 @@ class Clientes{
 
   private:
 
-    string DNI_, nombre_, apellido1_, apellido1_, direccion_, anotaciones_,twitter_, facebook_;
+    string DNI_, nombre_, apellido1_, apellido2_, direccion_, anotaciones_,twitter_, facebook_;
     int favorito_;
 
   //Parte publica, observadores y modificadores;
@@ -27,28 +27,66 @@ class Clientes{
 
     //observadores
 
-    string getDNI();
-    string getNombre();
-    string getApellido1();
-    string getApellido2();
-    string getDireccion();
-    string getAnotacion();
-    string getTwitter();
-    string getFacebook();
-    string getApellidosyNombre();
-    int getFavorito();
+    string getDNI()const {
+      return DNI;
+    };
+    string getNombre()const {
+      return nombre;
+    };
+    string getApellido1()const {
+      return apellido1;
+    };
+    string getApellido2()const {
+      return apellido2;
+    };
+    string getDireccion()const {
+      return direccion;
+    };
+    string getAnotacion()const {
+      return anotaciones;
+    };
+    string getTwitter()const {
+      return twitter;
+    };
+    string getFacebook()const {
+      return facebook;
+    };
+    string getApellidosyNombre()const{
+      
+    };
+    int getFavorito()const{
+      return favorito;
+    };
 
 
     //modificadores
 
-    void setDNI(string num);
-    void setNombre(string name);
-    void setApellido1(string surname1);
-    void setApellido2(string surname2);
-    void setDireccion(string direction);
-    void setAnotaciones(string anotation);
-    void setTwitter(string tuita);
-    void setFacebook(string feibu);
-    void setFavorito(int favorite);
+    void setDNI(string num){
+      DNI=num;
+    };
+    void setNombre(string name){
+      nombre=name;
+    };
+    void setApellido1(string surname1){
+      apellido1=surname1;
+    };
+    void setApellido2(string surname2){
+      apellido2=surname2;
+    };
+    void setDireccion(string direction){
+      direccion=direction;
+    };
+    void setAnotaciones(string anotation){
+      anotaciones=anotation;
+    };
+    void setTwitter(string tuita){
+      twitter=tuita;
+    };
+    void setFacebook(string feibu){
+      facebook=feibu;
+    };
+    void setFavorito(int favorite){
+      favorito=favorite;
+    };
 
 };
