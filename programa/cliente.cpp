@@ -52,7 +52,7 @@ class Clientes{
       return facebook;
     };
     string getApellidosyNombre()const{
-      
+
     };
     int getFavorito()const{
       return favorito;
@@ -68,7 +68,7 @@ class Clientes{
         cout<<"Error, longitud del DNI no valida"<<endl;
       }
     };
-    
+
     void setNombre(string name){
       if(name.length()>0 && name.length()<=40){
         nombre=name;
@@ -76,7 +76,7 @@ class Clientes{
         cout<<"Error"<<endl;
       }
     };
-    
+
     void setApellido1(string surname1){
       if(surname1.length()>0 && surname1.length()<=40){
         apellido1=surname1;
@@ -84,7 +84,7 @@ class Clientes{
         cout<<"Error"<<endl;
       }
     };
-    
+
     void setApellido2(string surname2){
       if(surname2.length()>0 && surname2.length()<=40){
         apellido2=surname2;
@@ -92,19 +92,19 @@ class Clientes{
         cout<<"Error"<<endl;
       }
     };
-    
+
     void setDireccion(string direction){
      if(direction.length()>0 && direction.length()<=40){
         direccion=direction;
       } else {
         cout<<"Error"<<endl;
-      } 
+      }
     };
-    
+
     void setAnotaciones(string anotation){
       anotaciones=anotation;
     };
-    
+
     void setTwitter(string tuita){
       if(tuita.length()>=2 && tuita.length<=30) {
         twitter=tuita;
@@ -112,7 +112,7 @@ class Clientes{
         cout<<"Error"<<endl;
       }
     };
-    
+
     void setFacebook(string feibu){
       if(feibu.length()>=3 && feibu.length<=40){
         facebook=feibu;
@@ -120,7 +120,7 @@ class Clientes{
         cout<<"Error"<<endl;
       }
     };
-    
+    //haria falta diferenciar entre si ponemos 0 o 1 aqui? este metodo solo lo vamos a utilizar los desarrolladores no el administrativo
     void setFavorito(int favorite){
       if(favorite==0 || favorite ==1) {
         favorito=favorite;

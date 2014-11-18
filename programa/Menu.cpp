@@ -1,7 +1,10 @@
 #include <iostream>
  using namespace std;
  int main(){
- 	int opc;
+  string DNI,string fav,string opc1 string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="";
+  int favorito=0;
+ 	int opc=0;
+   Lista lista;
  	do{
  		cout<<"------------------CLINICA--------------------\n";
  		cout<<"1.-Añadir\n";
@@ -17,8 +20,32 @@
  		cin>>opc;
  		switch(opc){
  			case 1: {
-
- 			}
+         Clientes aux;
+         cout<<"\nIntroduce el nombre:"<<endl;
+         cin>>nombre;
+         cout<<"\nIntroduce el primer apellido:"<<endl;
+         cin>>apellido1;
+         cout<<"\nIntroduce el segundo apellido:"<<endl;
+         cin>>apellido2;
+         cout<<"\nIntroduce la dirección:"<<endl;
+         cin>>direccion;
+         cout<<"\nIntroduce la cuenta de twitter:"<<endl;
+         cin>>twitter;
+         cout<<"\nIntroduce la cuenta de facebook:"<<endl;
+         cin>>facebook;
+         cout<<"\n¿Quieres marcarlo como favorito?\tS/N"<<endl;
+         cin>>fav;
+         if(fav=='S' || fav=='s'){
+          favorito=1;
+         }
+         else favorito=0;
+         cout<<"\n¿Desea introducir anotaciones sobre este contacto?\tS/N"<<endl;
+ 			   cin>>opc1;
+         if(opc1=='S' || opc1=='s'){
+           cin>>anotaciones;
+         }
+         lista.insertarCliente(aux);        
+      }
  			case 2:{
 
  			}
@@ -26,28 +53,28 @@
 
  			}
  			case 4:{
- 				
+
  			}
  			case 5:{
- 				
+
  			}
  			case 6:{
- 				
+
  			}
  			case 7:{
- 				
+
  			}
  			case 8:{
- 			
+
  			}
  			case 9:{
- 			 
+
  			}
  			}
  		}
  	}while(opc!=8);
 
 
- 	
+
  	return 0;
  }
