@@ -13,7 +13,7 @@ class Clientes{
 
   private:
 
-    string DNI_, nombre_, apellido1_, apellido2_, direccion_, anotaciones_,twitter_, facebook_;
+    string DNI_, nombre_, apellido1_, apellido2_, direccion_, anotaciones_,twitter_, facebook_, numero_, fijo_;
     int favorito_;
 
   //Parte publica, observadores y modificadores;
@@ -56,6 +56,14 @@ class Clientes{
     };
     int getFavorito()const{
       return favorito;
+    };
+    
+    string getNumero() const{
+      return numero;
+    };
+    
+    string getFijo() const{
+      return fijo;
     };
 
 
@@ -120,6 +128,23 @@ class Clientes{
         cout<<"Error"<<endl;
       }
     };
+    
+    void setNumero(string n){
+      if(n.length()==9) {
+        numero=n;
+      } else {
+        cout<<"Error el numero debe contener 9 caracteres"<<endl;
+      }
+    };
+    
+    void setFijo(string f){
+      if(f.length()==9){
+        fijo=f;
+      } else {
+        cout<<"Error el numero debe contener 9 caracteres"<<endl;
+      }
+    };
+    
     //haria falta diferenciar entre si ponemos 0 o 1 aqui? este metodo solo lo vamos a utilizar los desarrolladores no el administrativo
     void setFavorito(int favorite){
       if(favorite==0 || favorite ==1) {
