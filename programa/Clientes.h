@@ -1,7 +1,7 @@
 #include <iostream>
-#include <string.h>
-#ifndef _Clientes
-#define _Clientes
+#include <string>
+#include <stdlib.h>
+#include <stdio.h>
 using namespace std;
 
 class Clientes{
@@ -10,8 +10,8 @@ class Clientes{
 
   private:
 
-    string DNI_, nombre_, apellido1_, apellido2_,numero_,fijo_, direccion_, anotaciones_,twitter_, facebook_;
-    int favorito_;
+    string DNI, nombre, apellido1, apellido2,numero,fijo, direccion, anotaciones,twitter, facebook;
+    int favorito;
 
   //Parte publica, observadores y modificadores;
 
@@ -24,16 +24,18 @@ class Clientes{
 
     //observadores
 
-    string getDNI();
-    string getNombre();
-    string getApellido1();
-    string getApellido2();
-    string getDireccion();
-    string getAnotacion();
-    string getTwitter();
-    string getFacebook();
-    string getApellidosyNombre();
-    int getFavorito();
+    string getDNI()const;
+    string getNombre()const;
+    string getApellido1()const;
+    string getApellido2()const;
+    string getDireccion()const;
+    string getAnotacion()const;
+    string getTwitter()const;
+    string getFacebook()const;
+    string getApellidosyNombre()const;
+    string getFijo()const;
+    string getNumero()const;
+    int getFavorito()const;
 
 
     //modificadores
@@ -55,5 +57,7 @@ class Clientes{
     void setFacebook(string feibu);
     //haria falta diferenciar entre si ponemos 0 o 1 aqui? este metodo solo lo vamos a utilizar los desarrolladores no el administrativo
     void setFavorito(int favorite);
+    void setFijo(string f);
+    void setNumero(string n);
 
 };

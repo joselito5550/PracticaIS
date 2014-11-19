@@ -5,76 +5,56 @@
 //Requiere: Nada.
 //Devuelve: Una clase.
 //Detalles: Clase cliente y parte pública y privada con modificadores y observadores.
-<<<<<<< HEAD
 #include "Clientes.h"
-#include <string.h>
-=======
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <stdio.h>
+using namespace std;
 
-
-class Clientes{
-
-  //parte privada: donde iran todos los datos de la clase.
-
-  private:
-
-    string DNI_, nombre_, apellido1_, apellido2_, direccion_, anotaciones_,twitter_, facebook_, numero_, fijo_;
-    int favorito_;
-
-  //Parte publica, observadores y modificadores;
-
-  public:
-
-    //contructor
-
-    Clientes(string DNI, string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="", int favorito=0);
-
-
->>>>>>> 5e822177b85d9d7de569b19f15f2c0a5b2971f60
-    //observadores
-
-    string getDNI()const {
+    string Clientes::getDNI()const {
       return DNI;
     };
-    string getNombre()const {
+    string Clientes::getNombre()const {
       return nombre;
     };
-    string getApellido1()const {
+    string Clientes::getApellido1()const {
       return apellido1;
     };
-    string getApellido2()const {
+    string Clientes::getApellido2()const {
       return apellido2;
     };
-    string getDireccion()const {
+    string Clientes::getDireccion()const {
       return direccion;
     };
-    string getAnotacion()const {
+    string Clientes::getAnotacion()const {
       return anotaciones;
     };
-    string getTwitter()const {
+    string Clientes::getTwitter()const {
       return twitter;
     };
-    string getFacebook()const {
+    string Clientes::getFacebook()const {
       return facebook;
     };
-    string getApellidosyNombre()const{
+    string Clientes::getApellidosyNombre()const{
 
     };
-    int getFavorito()const{
+    int Clientes::getFavorito()const{
       return favorito;
     };
-    
-    string getNumero() const{
+
+    string Clientes::getNumero() const{
       return numero;
     };
-    
-    string getFijo() const{
+
+    string Clientes::getFijo() const{
       return fijo;
     };
 
 
     //modificadores
 
-      void setDNI(string num){
+      void Clientes::setDNI(string num){
       if(num.length()==9){
         DNI=num;
       } else {
@@ -82,7 +62,7 @@ class Clientes{
       }
     };
 
-    void setNombre(string name){
+    void Clientes::setNombre(string name){
       if(name.length()>0 && name.length()<=40){
         nombre=name;
       } else {
@@ -90,7 +70,7 @@ class Clientes{
       }
     };
 
-    void setApellido1(string surname1){
+    void Clientes::setApellido1(string surname1){
       if(surname1.length()>0 && surname1.length()<=40){
         apellido1=surname1;
       } else {
@@ -98,7 +78,7 @@ class Clientes{
       }
     };
 
-    void setApellido2(string surname2){
+    void Clientes::setApellido2(string surname2){
       if(surname2.length()>0 && surname2.length()<=40){
         apellido2=surname2;
       } else {
@@ -106,7 +86,7 @@ class Clientes{
       }
     };
 
-    void setDireccion(string direction){
+    void Clientes::setDireccion(string direction){
      if(direction.length()>0 && direction.length()<=40){
         direccion=direction;
       } else {
@@ -114,49 +94,48 @@ class Clientes{
       }
     };
 
-    void setAnotaciones(string anotation){
+    void Clientes::setAnotaciones(string anotation){
       anotaciones=anotation;
     };
 
-    void setTwitter(string tuita){
-      if(tuita.length()>=2 && tuita.length<=30) {
+    void Clientes::setTwitter(string tuita){
+      if(tuita.length()>=2 && tuita.length()<=30) {
         twitter=tuita;
       } else {
         cout<<"Error"<<endl;
       }
     };
 
-    void setFacebook(string feibu){
-      if(feibu.length()>=3 && feibu.length<=40){
+    void Clientes::setFacebook(string feibu){
+      if(feibu.length()>=3 && feibu.length()<=40){
         facebook=feibu;
       } else {
         cout<<"Error"<<endl;
       }
     };
-    
-    void setNumero(string n){
+
+    void Clientes::setNumero(string n){
       if(n.length()==9) {
         numero=n;
       } else {
         cout<<"Error el numero debe contener 9 caracteres"<<endl;
       }
     };
-    
-    void setFijo(string f){
+
+    void Clientes::setFijo(string f){
       if(f.length()==9){
         fijo=f;
       } else {
         cout<<"Error el numero debe contener 9 caracteres"<<endl;
       }
     };
-    
+
     //haria falta diferenciar entre si ponemos 0 o 1 aqui? este metodo solo lo vamos a utilizar los desarrolladores no el administrativo
-    void setFavorito(int favorite){
+    void Clientes::setFavorito(int favorite){
       if(favorite==0 || favorite ==1) {
         favorito=favorite;
-      } else {
+      }
+       else {
         cout<<"Error, favorite debe tomar valor 0 (no favorito) o valor 1 (favorito)"<<endl;
       }
     };
-
-};

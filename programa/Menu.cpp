@@ -5,8 +5,9 @@
 
  using namespace std;
  int main(){
-  string DNI,string fav,string opc1 string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="";
+  string DNI, fav, nombre="",apellido1="",apellido2="", direccion="", anotaciones="",twitter="",facebook="";
   int favorito=0;
+  char opc1;
  	int opc=0;
    Lista lista;
  	do{

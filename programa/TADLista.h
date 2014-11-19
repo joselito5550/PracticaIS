@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Clientes.h"
 #include <string.h>
+#include <fstream>
 #define INCREMENTO 4
 #ifndef _LISTA
 #define _LISTA
@@ -19,7 +20,7 @@ class lista {
  void anadirDch(Clientes& e);
  void eliminarIzq();
  void eliminarDch();
- bool pertenece(Palabra e);
+ bool pertenece(Clientes& e);
  void insertar(int i, Clientes& e);
  void eliminar(int i);
  void modificar(int i, Clientes& e);
