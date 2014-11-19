@@ -5,8 +5,31 @@
 //Requiere: Nada.
 //Devuelve: Una clase.
 //Detalles: Clase cliente y parte pública y privada con modificadores y observadores.
+<<<<<<< HEAD
 #include "Clientes.h"
 #include <string.h>
+=======
+
+
+class Clientes{
+
+  //parte privada: donde iran todos los datos de la clase.
+
+  private:
+
+    string DNI_, nombre_, apellido1_, apellido2_, direccion_, anotaciones_,twitter_, facebook_, numero_, fijo_;
+    int favorito_;
+
+  //Parte publica, observadores y modificadores;
+
+  public:
+
+    //contructor
+
+    Clientes(string DNI, string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="", int favorito=0);
+
+
+>>>>>>> 5e822177b85d9d7de569b19f15f2c0a5b2971f60
     //observadores
 
     string getDNI()const {
@@ -38,6 +61,14 @@
     };
     int getFavorito()const{
       return favorito;
+    };
+    
+    string getNumero() const{
+      return numero;
+    };
+    
+    string getFijo() const{
+      return fijo;
     };
 
 
@@ -102,6 +133,23 @@
         cout<<"Error"<<endl;
       }
     };
+    
+    void setNumero(string n){
+      if(n.length()==9) {
+        numero=n;
+      } else {
+        cout<<"Error el numero debe contener 9 caracteres"<<endl;
+      }
+    };
+    
+    void setFijo(string f){
+      if(f.length()==9){
+        fijo=f;
+      } else {
+        cout<<"Error el numero debe contener 9 caracteres"<<endl;
+      }
+    };
+    
     //haria falta diferenciar entre si ponemos 0 o 1 aqui? este metodo solo lo vamos a utilizar los desarrolladores no el administrativo
     void setFavorito(int favorite){
       if(favorite==0 || favorite ==1) {
