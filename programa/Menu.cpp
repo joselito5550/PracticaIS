@@ -1,4 +1,8 @@
 #include <iostream>
+#include <string.h>
+#include "Clientes.h"
+#include "TADLista.h"
+
  using namespace std;
  int main(){
   string DNI,string fav,string opc1 string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="";
@@ -44,8 +48,8 @@
          if(opc1=='S' || opc1=='s'){
            cin>>anotaciones;
          }
-         int pos= lista.posabc(aux);
-         lista.insertarCliente(aux);        
+         int pos= lista.posabc(aux);    // vemos donde tenemos qeu ponerlo
+         lista.insertarCliente(pos,aux);
       }
  			case 2:{
 

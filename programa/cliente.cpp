@@ -5,26 +5,8 @@
 //Requiere: Nada.
 //Devuelve: Una clase.
 //Detalles: Clase cliente y parte pública y privada con modificadores y observadores.
-
-
-class Clientes{
-
-  //parte privada: donde iran todos los datos de la clase.
-
-  private:
-
-    string DNI_, nombre_, apellido1_, apellido2_, direccion_, anotaciones_,twitter_, facebook_;
-    int favorito_;
-
-  //Parte publica, observadores y modificadores;
-
-  public:
-
-    //contructor
-
-    Clientes(string DNI, string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="", int favorito=0);
-
-
+#include "Clientes.h"
+#include <string.h>
     //observadores
 
     string getDNI()const {

@@ -1,4 +1,6 @@
 # include "TADLista.h"
+#include <string.h>
+using namespace std;
 lista::lista()
 {
  elementos=new Clientes[INCREMENTO];
