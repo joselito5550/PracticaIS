@@ -44,6 +44,7 @@
          if(opc1=='S' || opc1=='s'){
            cin>>anotaciones;
          }
+         int pos= lista.posabc(aux);
          lista.insertarCliente(aux);        
       }
  			case 2:{

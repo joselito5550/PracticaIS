@@ -61,6 +61,17 @@ Clientes& lista::observar(int i) {
 bool lista::esvacia() {
  return (n == 0);
 }
+void lista::posabc(Cliente &e){           //con esta funcion vemos donde tenemos que colocar el objeto cliente
+  string apellido= e.getapellido1();
+  int i=0;
+  bool encontrado=false;
+  while(i<n && !encontrado){              //o es "<" o es ">"
+    if(strcmp(elementos[i].getapellido1,apellido)<0){
+      encontrado=true;
+    }
+    else i++;
+  }
+}
 
 void lista::eliminar(int i) //es segun el usuario
 //no lo podemos macharcar
