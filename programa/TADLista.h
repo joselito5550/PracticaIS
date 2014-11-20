@@ -21,13 +21,13 @@ class lista {
  void eliminarIzq();
  void eliminarDch();
  bool pertenece(Clientes& e);
- void insertar(int i, Clientes& e);
+ void insertarCliente(int i, Clientes &e);
  void eliminar(int i);
  void modificar(int i, Clientes& e);
  Clientes& observar(int i);
  int posicion(Clientes& e);
  void volcarfichero();
  void cargarfichero();
- void posabc();
+ void posabc(Clientes &e);
 };
 #endif

@@ -11,6 +11,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 using namespace std;
+    Clientes::Clientes(){
+    string DNI;
+    string nombre="";
+    string apellido1="";
+    string apellido2="";
+    string direccion="";
+    string anotaciones="";
+    string twitter="";
+    string facebook="";
+    int favorito=0;
+
+    }
 
     string Clientes::getDNI()const {
       return DNI;

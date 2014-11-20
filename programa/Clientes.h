@@ -19,11 +19,10 @@ class Clientes{
 
     //contructor
 
-    Clientes(string DNI, string nombre="", string apellido1="",string apellido2="", string direccion="", string anotaciones="", string twitter="", string facebook="", int favorito=0);
 
 
     //observadores
-
+    Clientes();
     string getDNI()const;
     string getNombre()const;
     string getApellido1()const;

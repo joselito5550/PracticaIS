@@ -1,5 +1,6 @@
 # include "TADLista.h"
 #include <string.h>
+#include <iostream>
 using namespace std;
 lista::lista()
 {
@@ -63,12 +64,12 @@ Clientes& lista::observar(int i) {
 bool lista::esvacia() {
  return (n == 0);
 }
-void lista::posabc(Cliente &e){           //con esta funcion vemos donde tenemos que colocar el objeto cliente
-  string apellido= e.getapellido1();
+void lista::posabc(Clientes &e){           //con esta funcion vemos donde tenemos que colocar el objeto cliente
+  string apellido= e.getApellido1();
   int i=0;
   bool encontrado=false;
   while(i<n && !encontrado){              //o es "<" o es ">"
-    if(strcmp(elementos[i].getapellido1,apellido)<0){
+    if(strcmp(elementos[i].getApellido1,apellido)<0){
       encontrado=true;
     }
     else i++;
@@ -114,18 +115,6 @@ inline int lista::longitud()
  return n;
 }
 
-lista::lista(Palabra e)
-{
- elementos=new Palabra[INCREMENTO];
- if (elementos!=NULL) {
-  Tama=INCREMENTO;
-   n=1;
-   elementos[0]=e;
- }
- else {
- Tama=n=-1;
- }
-}
 void lista::anadirIzq(Clientes& e)
 {
  insertar(1, e);
@@ -164,7 +153,8 @@ void Lista::cargarfichero()  		//llamamos a este metodo siempre que iniciemos el
      if (f.fail()) cout<<"\n\tError al abrir el fichero";
      do{
     	f.read((char*)&aux,sizeof(Clientes));
-     		elementos[i].insertarCliente(aux);
+     		elementos[i]=aux;
+        i++;
      	}while (!f.eof());
 f.close();
 f.clear();
