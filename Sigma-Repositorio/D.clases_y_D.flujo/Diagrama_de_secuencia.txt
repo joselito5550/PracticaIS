@@ -1,0 +1,144 @@
+IDENTIFICADOR: Insertar.
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Ninguna.
+
+SECUENCIA DE EVENTOS DE FLUJO:
+
+	1. El administrador pulsa la opcion insertar.
+	2. El sistema muestra al administrador los campos que debe rellenar.
+	3. El administrador rellena los campos.
+	4. El sistema confirma el insertado del nuevo contacto.
+
+POSTCONDICIONES: El sistema no debe dejar insertar un contacto nuevo sin
+no se rellenan los campos obligatorios.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
+
+
+IDENTIFICADOR: Buscar.
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Que el contacto exista en la agenda.
+
+SECUENCIA DE EVENTOS DE FLUJO: 
+	
+	1. El administrador pulsa la opción buscar.
+	2. El sistema pide al administrador que inserte el apellido.
+	3. El administrador inserta el apellido.
+	4. El sistema busca el contacto.
+	5. El sistema devuelve el contacto con todos los campos.
+
+POSTCONDICIONES: El sistema debe devolver todos los campos de dicho
+contacto.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
+
+
+IDENTIFICADOR: Borrar.
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Que el contacto a borrar exista.
+
+SECUENCIA DE EVENTOS DE FLUJO:
+	
+	1. El administrador pulsa la opción borrar.
+	2. El sistema pide los apellidos y nombre.
+	3. El administrador inserta dichos campos.
+	4. El sistema borra totalmente dicho contacto.
+	5. El sistema confirma que el contacto ha sido borrado con éxito.
+
+POSTCONDICIONES: El contacto debe haber sido borrado completamente.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
+
+
+IDENTIFICADOR: Modificar.
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Dicho contacto a modificar exista.
+
+SECUENCIA DE EVENTOS DE FLUJO:
+
+	1. El administrador pulsa la opción modificar.
+	2. El sistema pide apellidos y nombre.
+	3. El administrador inserta dichos campos.
+	4. El sistema devuelve el contacto con todos los campos modificables.
+	5. El administrador modifica los campos.
+	6. El sistema guarda la modificación.
+	7. El sistema devuelve una confirmación de que se ha guardado con 		   éxito.
+
+POSTCONDICIONES: El sistema debe sustituir los antiguos campos por los nuevos que el administrativo ha modificado.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
+
+
+IDENTIFICADOR: Copia de seguridad.
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Que existan contactos en la lista.
+
+SECUENCIA DE EVENTOS DE FLUJO:
+
+	1. El administrador pulsa la opción copia de seguridad.
+	2. El sistema hace la copia de seguridad.
+	3. El sistema devuelve la confirmación de que dicha copia
+	   se ha realizado con éxito.
+
+POSTCONDICIONES: La copia de seguridad debe de haber copiado todos los contactos de la lista.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
+
+
+IDENTIFICADOR: Restaurar copia de seguridad.
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Que exista una copia de seguridad.
+
+SECUENCIA DE EVENTOS DE FLUJO:
+
+	1. El administrador pulsa la opción restaurar copia de seguridad.
+	2. El sistema comprueba que exista una copia de seguridad.
+	3. El sistema avisa de que dicha restauración borrará los contactos
+	   que no estén en la copia de seguridad.
+	4. El administrador confirma que quiere hacer dicha restauración.
+	5. El sistema restaura en la lista todos los contactos almacenados 	      en la copia.
+
+POSTCONDICIONES: Todos los contactos de la lista deben ser pertenecientes a la copia de seguridad restaurada.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
+
+
+IDENTIFICADOR: FAVORITO
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Que existan contactos en la lista.
+
+SECUENCIA DE EVENTOS DE FLUJO:
+
+	1. El administrador pulsa la opción añadir favorito.
+	2. El sistema pide los apellidos y nombre del contacto.
+	3. El administrador rellena dichos campos.
+	4. El sistema devuelve el contacto al administrador.
+	5. El administrador lo añade o lo elimina de favorito.
+	
+
+POSTCONDICIONES: Tras cada modificación el sistema devuelve 'Añadido a favorito' o 'Eliminado de favorito' dependiendo de la opción elegida por el administrador.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
+
+
+IDENTIFICADOR: IMPRIMIR FAVORITO
+ACTOR QUE LO INDICAN: Administrativo.
+PRECONDICIONES: Que exitan contactos favoritos.
+
+SECUENCIA DE EVENTOS DE FLUJO:
+
+	1. El administrador pulsa la opción imprimir favorito.
+	2. El sistema busca entre los contactos los favoritos y 
+	   los muestra por pantalla.
+	
+POSCONDICIONES: Que el sistema muestre todos los favoritos por pantalla.
+
+
+	AQUI SE PONDRIA EL DIBUJO, (CADA FUNCION TIENE UN DIBUJO 	 		DIFERENTE)
