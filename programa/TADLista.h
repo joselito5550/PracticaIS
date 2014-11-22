@@ -28,6 +28,6 @@ class lista {
  int posicion(Clientes& e);
  void volcarfichero();
  void cargarfichero();
- void posabc(Clientes &e);
+ int posabc(Clientes &e);
 };
 #endif

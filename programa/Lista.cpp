@@ -64,16 +64,17 @@ Clientes& lista::observar(int i) {
 bool lista::esvacia() {
  return (n == 0);
 }
-void lista::posabc(Clientes &e){           //con esta funcion vemos donde tenemos que colocar el objeto cliente
+int lista::posabc(Clientes &e){           //con esta funcion vemos donde tenemos que colocar el objeto cliente
   string apellido= e.getApellido1();
   int i=0;
   bool encontrado=false;
   while(i<n && !encontrado){              //o es "<" o es ">"
-    if(strcmp(elementos[i].getApellido1,apellido)<0){
+    if(elementos[i].getApellido1()==apellido){
       encontrado=true;
     }
     else i++;
   }
+  return i;
 }
 
 void lista::eliminar(int i) //es segun el usuario
@@ -105,7 +106,7 @@ void lista::eliminar(int i) //es segun el usuario
 int lista::posicion(Clientes &e) //devuelve la posicion
 {
  int i=0;
- while (strcmp(elementos[i].getNombre(),e.getNombre())==0 && i < n && strcmp(elementos[i].getApellido1(),e.getApellido1())==0 && strcmp(elementos[i].getApellido2(),e.getApellido2())==0)
+ while (elementos[i].getNombre()==e.getNombre() && i < n && elementos[i].getApellido1()==e.getApellido1() && elementos[i].getApellido2()==e.getApellido2())
        i++;
  return (i == n ? -1 : i+1);
 }
@@ -115,7 +116,7 @@ inline int lista::longitud()
  return n;
 }
 
-void lista::anadirIzq(Clientes& e)
+/*void lista::anadirIzq(Clientes& e)
 {
  insertar(1, e);
 }
@@ -129,18 +130,18 @@ void lista::eliminarIzq()
 {
  eliminar(1);
 }
-
+*/
 void lista::eliminarDch()
 {
  eliminar(n);
 }
 
 
-bool lista::pertenece(Clientes e)
+bool lista::pertenece(Clientes &e)
 {
  return (posicion(e) != -1);
 }
-void Lista::cargarfichero()  		//llamamos a este metodo siempre que iniciemos el programa
+void lista::cargarfichero()  		//llamamos a este metodo siempre que iniciemos el programa
 {
      fstream f;
      Clientes aux;
@@ -160,13 +161,11 @@ f.close();
 f.clear();
 }
 
-void Lista::volcarfichero(){				//tras cada insertado actualizamos el fichero
+void lista::volcarfichero(){				//tras cada insertado actualizamos el fichero
 	f.open("agenda",ios::out|ios::binary);
-	fpalabra aux;
+	Clientes aux;
 	f.clear();
 	f.seekg(0, ios::beg); // Volver al principio
-	int numdepalabras;
-	int numsig;
 	for (int i=0;i<n;i++){
 			f.write((char*)&aux,sizeof(Clientes));
 		}
