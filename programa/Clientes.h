@@ -2,6 +2,8 @@
 #include <string>
 #include <stdlib.h>
 #include <stdio.h>
+#ifndef _CLIENTES
+#define _CLIENTES
 using namespace std;
 
 class Clientes{
@@ -60,3 +62,4 @@ class Clientes{
     void setNumero(string n);
 
 };
+#endif
