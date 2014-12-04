@@ -33,7 +33,7 @@
 **Para:** Tener actualizada la agenda.  
 **Dependencias:** Insertar , ordenar y buscar.  
 **Prioridad:** 5.  
-**Criterios de aceptación:**  
+**Criterios de aceptación:**  	
 - Ningún campo obligatorio podrá estar vacío.  
 - Al modificar un contacto, este aparecerá con la nueva información. al instante.
 - Tras la modificacion, el fichero seguira ordenado.
