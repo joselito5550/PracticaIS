@@ -27,10 +27,12 @@ int Agenda::longitud() {
 bool Agenda::pertenece(Cliente &e) {
 	bool encontrado=false;
 	list<Cliente>::iterator it= agenda.begin();
-	while(it!=agenda.end() && !encontrado){
-		if((*it).getDni()==e.getDni())	encontrado=true;
-		else it++;
-	}
+	while(!encontrado && it!=agenda.end()){//hay que buscarlo tambien por el segundo apellido para que sea igual
+			if((*it).getDni()==e.getDni() ){
+				encontrado=true;
+			}
+			else it++;
+		}
 	return encontrado;
 }
 
@@ -46,12 +48,12 @@ void Agenda::insertarCliente(list<Cliente>::iterator pos, Cliente& e) {
 		cout<<"\n¿El cliente ya existe, desea modificarlo?\nS/N\t:";
 		cin>>(opc);
 		if(opc=='s' || opc=='S'){
-			ok=modificar(pos, e);
+			ok=modificar(pos);
 		}
 	}
 	else{
 
-		agenda.insert(pos,1,e);	//me da a mi que asi no es :S
+		agenda.insert(pos,e);	//me da a mi que asi no es :S
 	}
 }
 
@@ -59,7 +61,7 @@ bool Agenda::eliminar(list<Cliente>::iterator it) {
 	agenda.erase(it);
 }
 
-Cliente Agenda::buscar(Cliente &e) {
+list<Cliente>::iterator Agenda::buscar(Cliente &e) {
 	bool encontrado=false;
 	list<Cliente>::iterator it= agenda.begin();
 	while(!encontrado && it!=agenda.end()){//hay que buscarlo tambien por el segundo apellido para que sea igual
@@ -68,40 +70,20 @@ Cliente Agenda::buscar(Cliente &e) {
 		}
 		else it++;
 	}
-
+return it;
 }
 
-bool Agenda::modificar(list<Cliente>::iterator i, Cliente& e) {
+bool Agenda::modificar(list<Cliente>::iterator i) {
 	Cliente aux;
-	string DNI, nombre, apellido1, apellido2,numero,fijo, direccion, anotaciones,twitter, facebook;
+	aux=(*i);
+	//como ya tenemos el iterator lo guardamos lo modificarmos y despues borramos el de esa posicion y metemos este
+	string nombre;
 	char fav;
 	cout<<"\nIntroduce el nombre:"<<endl;
 	cin>>nombre;
 	aux.setNombre(nombre);
-	cout<<"\nIntroduce el primer apellido:"<<endl;
-	cin>>apellido1;
-	aux.setApellido1(apellido1);
-	cout<<"\nIntroduce el segundo apellido:"<<endl;
-	cin>>apellido2;
-	aux.setApellido2(apellido2);
-	cout<<"\nIntroduce el DNI:"<<endl;
-	cin>>DNI;
-	aux.setDni(DNI);
-	cout<<"\nIntroduce la dirección:"<<endl;
-	cin>>direccion;
-	aux.setDireccion(direccion);
-	cout<<"\nIntroduce la cuenta de twitter:"<<endl;
-	cin>>twitter;
-	aux.setTwitter(twitter);
-	cout<<"\nIntroduce la cuenta de facebook:"<<endl;
-	cin>>facebook;
-	aux.setFacebook(facebook);
-	cout<<"\n¿Quieres marcarlo como favorito?\tS/N"<<endl;
-	cin>>fav;
-	if(fav=='S' || fav=='s'){
-		aux.setFavorito(1);
-	}
-	else aux.setFavorito(0);
+	*i=aux;
+	//insertarCliente(i,aux);
 	//ahora hay que mirar en que posicion ponerlo, para ello habra que hacer un nuevo metodo
 	//hay que machacarlo;
 }
@@ -137,12 +119,29 @@ list<Cliente> Agenda::getClientes() {
 
 list<Cliente>::iterator Agenda::buscarpos(Cliente& e) {
 	list<Cliente>::iterator it=agenda.begin();
-	while((*it).getApellido1()<=e.getApellido1() && it!=agenda.end())
+	bool entrado=false;
+
+
+	while((*it).getApellido1()<=e.getApellido1() && it!=agenda.end() && entrado==false)
 		{
-	        if((*it).getApellido1()==e.getApellido1()){
-			while((*it).getApellido2()<e.getApellido2()) it++;//si el primer apellido es igual hay que compararlo con el segundo
+			cout<<(*it).getApellido1() << endl;
+			cout<<e.getApellido1() << endl;
+
+	        if((*it).getApellido1()==e.getApellido1() && !entrado)
+	        {
+	        	if ((*it).getApellido2()<e.getApellido2() && !entrado)
+	        	{
+	        		it++;
+	        		entrado=true;
+	        		while((*it).getApellido2()<e.getApellido2() && it!=agenda.end())
+	        		{
+	        			it++;
+	        		}//si el primer apellido es igual hay que compararlo con el segundo
+	        		entrado=true;
+	        	}
+	        	entrado=true;
+
 	        }
-	        else it++;
 		}
 	return it;
 }

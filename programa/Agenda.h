@@ -25,8 +25,8 @@ public:
 	bool pertenece(Cliente &e);
 	void insertarCliente(list<Cliente>::iterator, Cliente &e);		/*hay que pasarlo por referencia?*/
 	bool eliminar(list<Cliente>::iterator it);
-	Cliente buscar(Cliente &e);
-	bool modificar(list<Cliente>::iterator, Cliente &e);
+	list<Cliente>::iterator buscar(Cliente &e);
+	bool modificar(list<Cliente>::iterator);
 	bool ordenar();
 	list<Cliente>::iterator buscarpos(Cliente &e);
 	list<Cliente> getFavoritos();

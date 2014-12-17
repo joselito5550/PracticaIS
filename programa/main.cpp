@@ -20,7 +20,7 @@ int main(){
 	Agenda agenda;
 	agenda.cargar();		//siempre se hará al iniciar el programa
 	do{
- 		cout<<"------------------CLINICA--------------------\n";
+ 		cout<<"\n------------------CLINICA--------------------\n";
  		cout<<"1.-Añadir\n";
  		cout<<"2.-Mostrar todos\n";
  		cout<<"3.-Buscar\n";
@@ -65,6 +65,7 @@ int main(){
  				         //ahora hay que mirar en que posicion ponerlo, para ello habra que hacer un nuevo metodo
  				         list<Cliente>::iterator it=agenda.buscarpos(aux);
  				         agenda.insertarCliente(it,aux);
+
                }break;
  			case 2:{
 
@@ -78,58 +79,60 @@ int main(){
  				cin>>opc;
  				switch(opc){
  					case 1:{
- 						int opc2;
- 						cout<<"\n1.Solo por un apellido";
- 						cout<<"\n2.Por ambos apellidos";
- 						cin>>opc2;
- 						switch(opc2){
- 						case 1:{
+
  							string apellido;
  							cin>>apellido;
  							menu.visualizar_agenda(agenda.getallApellido(apellido));
  						}break;
- 						case 2:{
- 							string apellido1, apellido2;
- 							cout<<"\nIntroduce el primer apellido:\t";
- 							cin>>apellido1;
- 							cout<<"\nIntroduce el segundo apellido:\t";
- 							cin>>apellido2;
- 							aux.setApellido1(apellido1);
- 							aux.setApellido2(apellido2);
- 							menu.visualizar_cliente(agenda.buscar(aux));
- 						}break;
- 						}
 
- 					}break;
+
  					case 2:{
  						string dni;
  						cout<<"\nIntroduce el DNI";
  						cin>>dni;
  						aux.setDni(dni);
- 						menu.visualizar_cliente(agenda.buscar(aux));
-
+ 						if(agenda.pertenece(aux)){
+ 						list<Cliente>::iterator it= agenda.buscar(aux);
+ 						Cliente otro=(*it);
+ 						menu.visualizar_cliente(otro);
+ 						}
+ 						else cout<<"\nNO";
  				}break;
  				}
  			}break;
  			case 4:{
-
- 			}
+ 				Cliente aux;
+ 				cout<<"Introduce le DNI del cliente que desea modificar"<<endl;
+ 				cin>>DNI;
+ 				aux.setDni(DNI);
+ 				if(agenda.pertenece(aux)){
+ 				agenda.modificar((agenda.buscar(aux)));
+ 				}
+ 				else cout<<"\nEl DNI introducido es el incorrecto\n";
+ 			}break;
  			case 5:{
-
- 			}
+ 				cout<<"Introduce el DNI de quien desea eliminar"<<endl;
+ 				cin>>DNI;
+				Cliente aux2;
+ 				aux2.setDni(DNI);
+ 				if(agenda.pertenece(aux2)){
+ 				list<Cliente>::iterator it= agenda.buscar(aux2);
+ 				agenda.eliminar(it);
+ 				}
+ 			}break;
  			case 6:{
 
- 			}
+ 			}break;
  			case 7:{
 
- 			}
+ 			}break;
  			case 8:{
 
- 			}
+ 			}break;
  			case 9:{
 
+ 			}break;
  			}
- 			}
- 		}while(opc!=8);
+ 		}while(opc!=9);
 
 }
