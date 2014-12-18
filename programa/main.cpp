@@ -6,10 +6,12 @@
  */
 #include <list>
 #include <iostream>
+#include <cstring>
 #include "Cliente.h"
 #include "Fichero.h"
 #include "Menu.h"
 #include "Agenda.h"
+#include <stdio.h>
 #include <string>
 using namespace std;
 int main(){
@@ -35,20 +37,23 @@ int main(){
  		switch(opc){
  			case 1: {
  				Cliente aux;
+ 						 getchar();
  				         cout<<"\nIntroduce el nombre:"<<endl;
- 				         cin>>nombre;
+ 				         getline(cin,nombre);
  				         aux.setNombre(nombre);
  				         cout<<"\nIntroduce el primer apellido:"<<endl;
- 				         cin>>apellido1;
+ 				         getline(cin,apellido1);
  				         aux.setApellido1(apellido1);
  				         cout<<"\nIntroduce el segundo apellido:"<<endl;
- 				         cin>>apellido2;
+ 				         getline(cin,apellido2);
  				         aux.setApellido2(apellido2);
  				         cout<<"\nIntroduce el DNI:"<<endl;
  				         cin>>DNI;
  				         aux.setDni(DNI);
+ 				         getchar();
  				         cout<<"\nIntroduce la dirección:"<<endl;
- 				         cin>>direccion;
+ 				         getline(cin,direccion);
+
  				         aux.setDireccion(direccion);
  				         cout<<"\nIntroduce la cuenta de twitter:"<<endl;
  				         cin>>twitter;
@@ -56,12 +61,14 @@ int main(){
  				         cout<<"\nIntroduce la cuenta de facebook:"<<endl;
  				         cin>>facebook;
  				         aux.setFacebook(facebook);
+ 				         getchar();
  				         cout<<"\n¿Quieres marcarlo como favorito?\tS/N"<<endl;
  				         cin>>fav;
  				         if(fav=='S' || fav=='s'){
  				        	 aux.setFavorito(1);
  				         }
  				         else aux.setFavorito(0);
+ 				         getchar();
  				         //ahora hay que mirar en que posicion ponerlo, para ello habra que hacer un nuevo metodo
  				         list<Cliente>::iterator it=agenda.buscarpos(aux);
  				         agenda.insertarCliente(it,aux);
@@ -105,8 +112,12 @@ int main(){
  				cout<<"Introduce le DNI del cliente que desea modificar"<<endl;
  				cin>>DNI;
  				aux.setDni(DNI);
- 				if(agenda.pertenece(aux)){
- 				agenda.modificar((agenda.buscar(aux)));
+ 				if(agenda.pertenece(aux))
+ 				{
+ 					getchar();
+ 					cout<<"\nIntroduce el nombre";
+ 					getline(cin,nombre);
+ 					agenda.modificar((agenda.buscar(aux)),nombre);
  				}
  				else cout<<"\nEl DNI introducido es el incorrecto\n";
  			}break;
@@ -121,7 +132,12 @@ int main(){
  				}
  			}break;
  			case 6:{
-
+ 				Cliente aux;
+ 				cout<<"\nIntroduce el dni";
+ 				cin>>DNI;
+ 				aux.setDni(DNI);
+ 				list<Cliente>::iterator it= agenda.buscar(aux);
+ 				(*it).setFavorito(1);
  			}break;
  			case 7:{
 

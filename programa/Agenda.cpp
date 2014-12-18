@@ -42,14 +42,11 @@ void Agenda::insertarCliente(list<Cliente>::iterator pos, Cliente& e) {
 	if(esvacia()){
 		agenda.push_back(e);
 	}
-	else if(pertenece(e)){
+	else if(pertenece(e))
+	{
 		//Si ya esta en la agenda le preguntamos si desea modificaro
-		char opc= 'n';
-		cout<<"\n¿El cliente ya existe, desea modificarlo?\nS/N\t:";
-		cin>>(opc);
-		if(opc=='s' || opc=='S'){
-			ok=modificar(pos);
-		}
+	cout<<"\nEl cliente ya existe";
+
 	}
 	else{
 
@@ -73,14 +70,11 @@ list<Cliente>::iterator Agenda::buscar(Cliente &e) {
 return it;
 }
 
-bool Agenda::modificar(list<Cliente>::iterator i) {
+bool Agenda::modificar(list<Cliente>::iterator i,string nombre) {
 	Cliente aux;
 	aux=(*i);
 	//como ya tenemos el iterator lo guardamos lo modificarmos y despues borramos el de esa posicion y metemos este
-	string nombre;
-	char fav;
-	cout<<"\nIntroduce el nombre:"<<endl;
-	cin>>nombre;
+
 	aux.setNombre(nombre);
 	*i=aux;
 	//insertarCliente(i,aux);
