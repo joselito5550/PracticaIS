@@ -70,15 +70,9 @@ list<Cliente>::iterator Agenda::buscar(Cliente &e) {
 return it;
 }
 
-bool Agenda::modificar(list<Cliente>::iterator i,string nombre) {
-	Cliente aux;
-	aux=(*i);
-	//como ya tenemos el iterator lo guardamos lo modificarmos y despues borramos el de esa posicion y metemos este
+bool Agenda::modificar(list<Cliente>::iterator i,Cliente aux) {
 
-	aux.setNombre(nombre);
 	*i=aux;
-	//insertarCliente(i,aux);
-	//ahora hay que mirar en que posicion ponerlo, para ello habra que hacer un nuevo metodo
 	//hay que machacarlo;
 }
 
@@ -95,6 +89,7 @@ list<Cliente> Agenda::getFavoritos() {
 }
 
 void Agenda::guardar(list<Cliente> agenda) {
+	Fichero f;
 	f.guardar_agenda(agenda);
 }
 
@@ -118,8 +113,6 @@ list<Cliente>::iterator Agenda::buscarpos(Cliente& e) {
 
 	while((*it).getApellido1()<=e.getApellido1() && it!=agenda.end() && entrado==false)
 		{
-			cout<<(*it).getApellido1() << endl;
-			cout<<e.getApellido1() << endl;
 
 	        if((*it).getApellido1()==e.getApellido1() && !entrado)
 	        {
@@ -136,10 +129,17 @@ list<Cliente>::iterator Agenda::buscarpos(Cliente& e) {
 	        	entrado=true;
 
 	        }
+	        it++;
 		}
 	return it;
 }
 
+Cliente Agenda::getcliente(list<Cliente>::iterator it) {
+
+	return *it;
+}
+
 void Agenda::cargar() {
+	Fichero f;
 	f.cargar_agenda();
 }

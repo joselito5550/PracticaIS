@@ -24,10 +24,18 @@ void Menu::visualizar_agenda(list<Cliente> agenda) {	//que mostramos? apellidos 
 }
 
 void Menu::visualizar_cliente(Cliente c) {
-	cout<<"\nNombre:\t"<<c.getNombre();
-	cout<<"\nApellidos:\t"<<c.getApellido1()<<" "<<c.getApellido2();
-	cout<<"\nNumero:\t"<<c.getNumero();
-	cout<<"\nDNI:\t"<<c.getDni();
-	if(c.getFavorito()==1) cout<<"-----------------------FAVORITO-----------------------";
+
+	 cout<<"\nNombre:\t"<<c.getNombre();
+	 cout<<"\nApellidos:\t"<<c.getApellido1()<<" "<<c.getApellido2();
+	 cout<<"\nDNI:\t"<<c.getDni();
+	 cout<<"\nNumero:\t"<<c.getNumero();
+	 cout<<"\nNumero fijo:\t"<<c.getFijo();
+	 cout<<"\nDireccion:\t"<<c.getDireccion();
+	 cout<<"\nAnotaciones:\t"<<c.getAnotaciones();
+	 cout<<"\nTwitter:\t"<<c.getTwitter();
+	 cout<<"\nFacebook:\t"<<c.getFacebook();
+	 if(c.getFavorito()==1) cout<<"\n--------FAVORITO---------";
+	 cout<<"\n\n\n\n\n";
+
 
 }

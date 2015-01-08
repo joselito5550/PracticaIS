@@ -15,18 +15,18 @@ using namespace std;
 class Agenda {
 private:
 	list<Cliente> agenda;
-	Fichero f;
 public:
 	Agenda();
 	virtual ~Agenda();								//no tiene que ser virtual creo
 	bool esvacia();
 	list<Cliente> getClientes();
 	int longitud();
+	Cliente getcliente(list<Cliente>::iterator it);
 	bool pertenece(Cliente &e);
 	void insertarCliente(list<Cliente>::iterator, Cliente &e);		/*hay que pasarlo por referencia?*/
 	bool eliminar(list<Cliente>::iterator it);
 	list<Cliente>::iterator buscar(Cliente &e);
-	bool modificar(list<Cliente>::iterator,string nombre);
+	bool modificar(list<Cliente>::iterator,Cliente aux);
 	bool ordenar();
 	list<Cliente>::iterator buscarpos(Cliente &e);
 	list<Cliente> getFavoritos();

@@ -17,6 +17,21 @@ Fichero::~Fichero() {
 }
 
 void Fichero::guardar_agenda(list<Cliente> agenda) {
+		ofstream f("Contactos.txt");
+		//string nombreFichero="Contactos.txt";
+		char fav='n';
+		f.clear();
+	    //f.open(nombreFichero.c_str());
+	    list<Cliente>::iterator it= agenda.begin();
+	    f<<"hola_mundo";
+	    for(int i=0;i<agenda.size();i++,it++){
+	    	if((*it).getFavorito()==1)
+	    		fav='s';
+	    	else fav='n';
+	    	f<<(*it).getNombre()+","+(*it).getApellido1()+","+(*it).getApellido2()+","+(*it).getDni()+","+(*it).getNumero()+","+(*it).getFijo()+","+(*it).getDireccion()+","+(*it).getAnotaciones()+","+(*it).getTwitter()+","+(*it).getFacebook()+","+fav+"\n";
+
+	    }
+	    f.close();
 }
 
 void Fichero::cargar_agenda() {
