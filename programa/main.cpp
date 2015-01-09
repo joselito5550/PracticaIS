@@ -54,19 +54,19 @@ int main(){
  				         aux.setApellido2(apellido2);
  				        system("clear");
  				         cout<<"\nIntroduce el DNI:"<<endl;
- 				         cin>>DNI;
+ 				         getline(cin,DNI);
  				         aux.setDni(DNI);
  				        system("clear");
  				         cout<<"\nIntroduce el numero de telefono movil:"<<endl;
- 				         cin>>numero;
+ 				        getline(cin,numero);
  				         aux.setNumero(numero);
  				        system("clear");
  				         cout<<"\nIntroduce el numero de telefono fijo:"<<endl;
- 				        cin>>fijo;
+ 				        getline(cin,fijo);
  				        aux.setFijo(fijo);
- 				        getchar();
  				       system("clear");
  				        cout<<"\nIntroduce la dirección:"<<endl;
+
  				         getline(cin,direccion);
  				         aux.setDireccion(direccion);
  				        system("clear");
@@ -98,7 +98,7 @@ int main(){
  				         //ahora hay que mirar en que posicion ponerlo, para ello habra que hacer un nuevo metodo
  				         list<Cliente>::iterator it=agenda.buscarpos(aux);
  				         agenda.insertarCliente(it,aux);
- 				        agenda.guardar(agenda.getClientes());
+ 				        agenda.guardar(agenda.getClientes(),"memoria_agenda");
  				         system("clear");
                }break;
  			case 2:{
@@ -117,7 +117,7 @@ int main(){
  					case 1:{
  						system("clear");
  							string apellido;
- 							cin>>apellido;
+ 							getline(cin,apellido);
  							menu.visualizar_agenda(agenda.getallApellido(apellido));
  							}break;
 
@@ -149,8 +149,9 @@ int main(){
  				{	int op=0;
  					list<Cliente>::iterator it;
  					it=agenda.buscar(aux);
- 					aux=agenda.getcliente(it);
+
  					do{
+ 						aux=agenda.getcliente(it);
  						system("clear");
  						cout<<"\n1.Nombre";
  						cout<<"\n2.Apellidos";
@@ -164,16 +165,17 @@ int main(){
  						cout<<"\n10.Favorito";
 
  						if(aux.getFavorito()==1)
- 							cout<<"\t Ya es FAVORITO";
+ 							cout<<"\t FAVORITO";
  						else
- 							cout<<"\t No es FAVORITO";
+ 							cout<<"\t FAVORITO";
  						cout<<"\n0.Salir";
  						cin>>op;
  						switch(op){
  						case 1:{
  							system("clear");
  							cout<<"\nIntroduce el nombre";
- 							cin>>nombre;
+ 							getchar();
+ 							getline(cin,nombre);
  							aux.setNombre(nombre);
  							agenda.modificar(it,aux);
  							system("clear");
@@ -220,17 +222,20 @@ int main(){
  						case 6:{
  							system("clear");
  							cout<<"\nIntroduce la direccion";
-  							cin>>direccion;
-  							aux.setDireccion(direccion);
+ 							getline(cin,direccion);
+ 							aux.setDireccion(direccion);
  							agenda.modificar(it,aux);
  							system("clear");
 
  						}break;
  						case 7:{
  							cout<<"\nIntroduce las anotaciones";
+ 							getchar();
  							getline(cin,anotaciones);
+
  							aux.setAnotaciones(anotaciones);
  							agenda.modificar(it,aux);
+ 							//(*it)=aux;
  							system("clear");
 
 
@@ -246,7 +251,7 @@ int main(){
  						}break;
  						case 9:{
  							cout<<"\nIntroduce el facebook";
- 							cin>>facebook;
+ 							getline(cin,facebook);
   							aux.setFacebook(facebook);
   							agenda.modificar(it,aux);
  							system("clear");
@@ -256,22 +261,23 @@ int main(){
  						case 10:{
  							if(aux.getFavorito()==1){
  								aux.setFavorito(0);
- 								cout<<"\nAhora no es Favorito";
  								agenda.modificar(it,aux);
  							}
  							else{
  								aux.setFavorito(1);
- 								cout<<"\nAhora es Favorito";
  								agenda.modificar(it,aux);
  							}
 
- 							agenda.guardar(agenda.getClientes());}break;
+ 							}break;
 
  						}
+
  						}while(op!=0);
 
  				}
  				else cout<<"\nEl DNI introducido es el incorrecto\n";
+
+ 				agenda.guardar(agenda.getClientes(),"memoria_agenda");
  			}break;
  			case 5:{
  				cout<<"Introduce el DNI de quien desea eliminar"<<endl;
@@ -282,6 +288,7 @@ int main(){
  				list<Cliente>::iterator it= agenda.buscar(aux2);
  				agenda.eliminar(it);
  				cout<<"\nEl cliente ha sido borrado";
+ 				agenda.guardar(agenda.getClientes(),"memoria_agenda");
  				}
  				else cout<<"El DNI introducido no pertenece a ningun cliente";
  			}break;
@@ -294,7 +301,10 @@ int main(){
  				(*it).setFavorito(1);
  			}break;
  			case 7:{
- 				agenda.guardar(agenda.getClientes());
+ 				cout<<"Introduce el nombre de la copia de seguridad";
+ 				getchar();
+ 				getline(cin,nombre);
+ 				agenda.guardar(agenda.getClientes(),nombre);
  			}break;
  			case 8:{
 

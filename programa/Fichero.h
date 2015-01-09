@@ -13,13 +13,13 @@
 #include "Cliente.h"
 #include "Agenda.h"
 #include "GestorFicheros.h"
-using namespace std;
+
 class Fichero: public GestorFicheros{
 
 public:
 	Fichero();
 	~Fichero();
-	void guardar_agenda(list<Cliente> agenda);
+	void guardar_agenda(list<Cliente> agenda,string nombre);
 	void cargar_agenda();
 
 };

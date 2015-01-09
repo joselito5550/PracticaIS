@@ -14,7 +14,7 @@ class  GestorFicheros {
 public:
 	GestorFicheros(){};
 	virtual ~GestorFicheros(){};
-	virtual  void guardar_agenda(list<Cliente> agenda){};
+	virtual  void guardar_agenda(list<Cliente> agenda, string nombre){};
 	virtual	void cargar_agenda(){};
 
 };

@@ -16,14 +16,13 @@ Fichero::~Fichero() {
 	// TODO Auto-generated destructor stub
 }
 
-void Fichero::guardar_agenda(list<Cliente> agenda) {
-		ofstream f("Contactos.txt");
+void Fichero::guardar_agenda(list<Cliente> agenda, string nombre) {
+		fstream f(nombre.c_str(),ios::out|ios::trunc);
 		//string nombreFichero="Contactos.txt";
 		char fav='n';
 		f.clear();
 	    //f.open(nombreFichero.c_str());
 	    list<Cliente>::iterator it= agenda.begin();
-	    f<<"hola_mundo";
 	    for(int i=0;i<agenda.size();i++,it++){
 	    	if((*it).getFavorito()==1)
 	    		fav='s';

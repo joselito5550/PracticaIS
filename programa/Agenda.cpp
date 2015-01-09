@@ -50,7 +50,7 @@ void Agenda::insertarCliente(list<Cliente>::iterator pos, Cliente& e) {
 	}
 	else{
 
-		agenda.insert(pos,e);	//me da a mi que asi no es :S
+		agenda.insert(pos,1,e);	//me da a mi que asi no es :S
 	}
 }
 
@@ -88,9 +88,9 @@ list<Cliente> Agenda::getFavoritos() {
 	return aux;
 }
 
-void Agenda::guardar(list<Cliente> agenda) {
+void Agenda::guardar(list<Cliente> agenda,string nombre) {
 	Fichero f;
-	f.guardar_agenda(agenda);
+	f.guardar_agenda(agenda,nombre);
 }
 
 list<Cliente> Agenda::getallApellido(string apellido) {
@@ -118,9 +118,9 @@ list<Cliente>::iterator Agenda::buscarpos(Cliente& e) {
 	        {
 	        	if ((*it).getApellido2()<e.getApellido2() && !entrado)
 	        	{
-	        		it++;
+	        		//it++;
 	        		entrado=true;
-	        		while((*it).getApellido2()<e.getApellido2() && it!=agenda.end())
+	        		while((*it).getApellido2()<=e.getApellido2() && it!=agenda.end())
 	        		{
 	        			it++;
 	        		}//si el primer apellido es igual hay que compararlo con el segundo
@@ -129,7 +129,8 @@ list<Cliente>::iterator Agenda::buscarpos(Cliente& e) {
 	        	entrado=true;
 
 	        }
-	        it++;
+
+	        else it++;
 		}
 	return it;
 }
