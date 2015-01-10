@@ -5,7 +5,10 @@
  *      Author: jose
  */
 
+//Solo necesitamos la libreria Cliente.h
 #include "Cliente.h"
+
+//Constructor con algunos parametros iniciados a "" o 0 para favorito;
 
 Cliente::Cliente() {
 	// TODO Auto-generated constructor stub
@@ -17,11 +20,16 @@ Cliente::Cliente() {
 	  anotaciones="";
 	  favorito=0;
 
+
 }
+
+//Destructor. sin uso;
 
 Cliente::~Cliente() {
 	// TODO Auto-generated destructor stub
 }
+
+//Modificadores y observadores
 
 const string& Cliente::getAnotaciones() const {
 	return anotaciones;
@@ -109,4 +117,11 @@ const string& Cliente::getTwitter() const {
 
 void Cliente::setTwitter(const string& twitter) {
 	this->twitter = twitter;
+}
+
+//Para agregar un text al json. Tenemos que tener cuidado con el tamaño
+string Cliente::getTexto(){ 
+	string texto;
+	texto="Nombre: "+getNombre()+" Apellidos: "+getApellido1()+" DNI: "+getDni()+" Numero: "+getNumero()+" Numero fijo: "+getFijo()+" Direccion: "+getDireccion()+" Anotaciones: "+getAnotaciones()+" Twitter: "+getTwitter()+" Facebook: "+getFacebook();
+	return texto;
 }

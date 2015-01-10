@@ -9,6 +9,7 @@
 #define MENU_H_
 #include <iostream>
 #include "Agenda.h"
+#include <cstdlib>
 #include "Cliente.h"
 class Menu {
 public:

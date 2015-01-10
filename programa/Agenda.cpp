@@ -140,7 +140,8 @@ Cliente Agenda::getcliente(list<Cliente>::iterator it) {
 	return *it;
 }
 
-void Agenda::cargar() {
+void Agenda::cargar(string nombre) {
 	Fichero f;
-	f.cargar_agenda();
+	agenda=f.cargar_agenda(nombre);
+
 }

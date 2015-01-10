@@ -2,7 +2,7 @@
  * Fichero.h
  *
  *  Created on: 13/12/2014
- *      Author: jose
+ *      Author: Jose Marquez
  */
 
 #ifndef FICHERO_H_
@@ -13,14 +13,15 @@
 #include "Cliente.h"
 #include "Agenda.h"
 #include "GestorFicheros.h"
-
+using namespace std;
 class Fichero: public GestorFicheros{
 
 public:
 	Fichero();
 	~Fichero();
 	void guardar_agenda(list<Cliente> agenda,string nombre);
-	void cargar_agenda();
+	void guardar_agendahtml(list<Cliente> agenda,string nombre);
+	list<Cliente> cargar_agenda(string nombre);
 
 };
 

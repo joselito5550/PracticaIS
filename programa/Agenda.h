@@ -31,8 +31,8 @@ public:
 	list<Cliente>::iterator buscarpos(Cliente &e);
 	list<Cliente> getFavoritos();
 	list<Cliente> getallApellido(string apellido);
-	void guardar(list<Cliente> agenda, string nombre);		//Se llama a guardar de Fichero
-	void cargar();							//Se llama a cargar de Fichero
+	void guardar(list<Cliente> agenda,string nombre);		//Se llama a guardar de Fichero
+	void cargar(string nombre);							//Se llama a cargar de Fichero
 
 
 };

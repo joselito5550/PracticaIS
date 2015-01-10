@@ -1,0 +1,36 @@
+{
+  "name": "swipe-pages",
+  "version": "0.2.0",
+  "ignore": [
+    ".editorconfig",
+    ".jshintrc",
+    ".gitignore",
+    ".bowerrc",
+    "test",
+    "bower.json",
+    ".gitattributes"
+  ],
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "swipe-pages.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.4.0"
+  },
+  "devDependencies": {
+    "polymer-test-tools": "Polymer/polymer-test-tools#^0.4.0"
+  },
+  "homepage": "https://github.com/TheSeamau5/swipe-pages",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "24a5db7c6a7c32fd566255421e08e18b9c281239"
+  },
+  "_source": "git://github.com/TheSeamau5/swipe-pages.git",
+  "_target": "~0.2.0",
+  "_originalSource": "swipe-pages",
+  "_direct": true
+}
